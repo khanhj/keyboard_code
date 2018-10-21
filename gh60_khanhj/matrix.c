@@ -159,16 +159,16 @@ static void select_row(uint8_t row)
             PORTC &= ~(1<<4);
             break;
         case 3:
-            DDRF  |= (1<<2);
-            PORTF &= ~(1<<2);
+            DDRF  |= (1<<4);
+            PORTF &= ~(1<<4);
             break;
         case 4:
             DDRF  |= (1<<3);
             PORTF &= ~(1<<3);
             break;
         case 5:
-            DDRF  |= (1<<4);
-            PORTF &= ~(1<<4);
+            DDRF  |= (1<<2);
+            PORTF &= ~(1<<2);
             break;
     }
 }
