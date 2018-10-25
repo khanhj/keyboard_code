@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 #ifndef DEBOUNCE
-#   define DEBOUNCE	5
+#    define DEBOUNCE	5
 #endif
 static uint8_t debouncing = DEBOUNCE;
 
@@ -99,15 +99,13 @@ matrix_row_t matrix_get_row(uint8_t row)
 static void  init_cols(void)
 {
     // Input with pull-up(DDR:0, PORT:1)
-
-
     DDRB  &= ~(1<<3 | 1<<2 | 1<<1 | 1<<0);
     PORTB |=  (1<<3 | 1<<2 | 1<<1 | 1<<0);
-	DDRD  &= ~(1<<7 | 1<<6 | 1<<5 | 1<<4 | 1<<3 | 1<<2);
+    DDRD  &= ~(1<<7 | 1<<6 | 1<<5 | 1<<4 | 1<<3 | 1<<2);
     PORTD |=  (1<<7 | 1<<6 | 1<<5 | 1<<4 | 1<<3 | 1<<2);
-	DDRE  &= ~(1<<7 | 1<<6 | 1<<0);
+    DDRE  &= ~(1<<7 | 1<<6 | 1<<0);
     PORTE |=  (1<<7 | 1<<6 | 1<<0);
-	DDRF  &= ~(1<<0);
+    DDRF  &= ~(1<<0);
     PORTF |=  (1<<0);
 }
 
@@ -138,7 +136,7 @@ static void unselect_rows(void)
     // Hi-Z(DDR:0, PORT:0) to unselect
     DDRC  &= ~0b00011100;
     PORTC &= ~0b00011100;
-	DDRF  &= ~0b00011100;
+    DDRF  &= ~0b00011100;
     PORTF &= ~0b00011100;
 }
 
